@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<launch>
+
+    <arg name="markerSize"       value="1"/> <!-- in m -->
+    <arg name="cameraImageTopic" value="/stereo_cam/left/camera/image"/>
+
+    <node pkg="aruco_ros" type="marker_publisher" name="aruco_marker_publisher">
+      <param name="image_topic"  value="$(arg cameraImageTopic)"/>
+      <param name="marker_size"  value="$(arg markerSize)"/>
+    </node>
+
+</launch>
+
