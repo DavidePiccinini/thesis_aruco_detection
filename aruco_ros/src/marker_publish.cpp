@@ -90,7 +90,7 @@ public:
     id_pub_ = nh_.advertise<aruco_msgs::IdentifiedMarkersIDs>("identified_marker_ids", 1);
     
     camParam_ = aruco::CameraParameters(camMatrix_, distCoeff_, camSize_);
-    distanceThreshold = 2; 
+    distanceThreshold = 3.5; 
   }
   
   // Computes the l2 norm of a vector, it's used to check for identifiable markers
